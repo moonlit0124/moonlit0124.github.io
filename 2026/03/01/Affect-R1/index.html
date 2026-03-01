@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/Affect-R1%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0.png">
 <meta property="article:published_time" content="2026-03-01T05:37:18.000Z">
-<meta property="article:modified_time" content="2026-03-01T12:25:22.035Z">
+<meta property="article:modified_time" content="2026-03-01T12:43:37.660Z">
 <meta property="article:author" content="Teng Hao">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/Affect-R1%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0.png">
@@ -46,6 +46,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -405,7 +407,7 @@ labels）</li>
 <h1 id="冷启动训练">冷启动训练</h1>
 <p>为了增强情感理解能力，AffectGPT-R1采用大规模粗粒度描述性情感数据集进行冷启动训练。</p>
 <figure>
-<img src="img/Affect-R1框架概述.png" srcset="/img/loading.gif" lazyload alt="Affect-R1框架">
+<img src="Affect-R1框架概述.png" srcset="/img/loading.gif" lazyload alt="Affect-R1框架">
 <figcaption aria-hidden="true">Affect-R1框架</figcaption>
 </figure>
 <p>AffectGPT-R1采用与AffectGPT相同的模型架构，如上图所示。该框架利用预融合层（Pre-fusion
@@ -565,7 +567,6 @@ Threshold），并引入 KL 散度惩罚项来正则化 <span class="math inline
 
   
   
-
 
 
 
@@ -759,49 +760,6 @@ Threshold），并引入 KL 散度惩罚项来正则化 <span class="math inline
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
